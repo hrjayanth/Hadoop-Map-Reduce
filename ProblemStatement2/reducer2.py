@@ -14,4 +14,4 @@ for line in sys.stdin:
 top_N=sorted(scores,reverse=True)[0:10]
 
 for t in top_N:
-    print(t[1], '\t', t[0] )
+    print('{}\t{}'.format(t[1], t[0]))

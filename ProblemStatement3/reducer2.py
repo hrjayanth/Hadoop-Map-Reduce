@@ -16,4 +16,4 @@ for line in sys.stdin:
         count = 1
 
 if current_batsman == batsman:
-    print (current_batsman, '\t' ,count)
+    print('{}\t{}'.format(current_batsman, count))

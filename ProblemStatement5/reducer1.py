@@ -1,24 +1,24 @@
 import sys
 
-current_batsman = None
-current_batsman_runs = 0
+current_fielder = None
+current_fielder_catches = 0
 
 for line in sys.stdin:
     line = line.strip()
-    batsman, run = line.split('\t')
+    fielder, catches = line.split('\t')
 
     try:
-        run = int(run)
+        catches = int(catches)
     except ValueError:
         continue
 
-    if current_batsman == batsman:
-        current_batsman_runs += run
+    if current_fielder == fielder:
+        current_fielder_catches += catches
     else:
-        if current_batsman:
-            print (current_batsman, '\t' ,current_batsman_runs)
-        current_batsman = batsman
-        current_batsman_runs = run
+        if current_fielder:
+            print('{}\t{}'.format(current_fielder, current_fielder_catches))
+        current_fielder = fielder
+        current_fielder_catches = catches
 
-if current_batsman == batsman:
-    print (current_batsman, '\t' ,current_batsman_runs)
+if current_fielder == fielder:
+    print('{}\t{}'.format(current_fielder, current_fielder_catches))

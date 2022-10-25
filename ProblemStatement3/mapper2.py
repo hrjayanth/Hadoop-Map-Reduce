@@ -12,4 +12,4 @@ for line in sys.stdin:
         continue
 
     if(batsman_runs >= 100):
-        print(batsman, '\t', batsman_runs)
+        print('{}\t{}'.format(batsman, batsman_runs))

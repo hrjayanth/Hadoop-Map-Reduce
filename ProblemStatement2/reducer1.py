@@ -17,9 +17,9 @@ for line in sys.stdin:
         current_bowler_wickets += wickets
     else:
         if current_bowler:
-            print(current_bowler, '\t', current_bowler_wickets)
+            print('{}\t{}'.format(current_bowler, current_bowler_wickets))
         current_bowler = bowler
         current_bowler_wickets = wickets
 
 if current_bowler == wickets:
-    print(current_bowler, '\t', current_bowler_wickets)
+    print('{}\t{}'.format(current_bowler, current_bowler_wickets))

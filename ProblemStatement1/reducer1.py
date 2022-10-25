@@ -16,9 +16,9 @@ for line in sys.stdin:
         current_batsman_runs += run
     else:
         if current_batsman:
-            print (current_batsman, '\t' ,current_batsman_runs)
+            print('{}\t{}'.format(current_batsman, current_batsman_runs))
         current_batsman = batsman
         current_batsman_runs = run
 
 if current_batsman == batsman:
-    print (current_batsman, '\t' ,current_batsman_runs)
+    print('{}\t{}'.format(current_batsman, current_batsman_runs))

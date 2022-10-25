@@ -4,7 +4,27 @@ List all the batsman who have hit centuries along with the count
 
 ## Map-Reduce Diagram
 
+![Centuries Map Reduce](https://user-images.githubusercontent.com/3033681/197848995-2188c028-17d7-49f2-95a5-e3dd2c1cdbff.png)
+
 ## Pseudocode
+
+### Mapper 1
+For each row
+	Extract the matchID_Batsman and Runs
+
+### Reducer 1
+For each row
+	Add the Batsman's score in a match
+	return the batsman name and runs
+
+### Mapper 2
+For each row
+	Filter only the runs which is equal to or more than 100
+	Return the batsman name and runs
+
+### Reducer 2
+For each row
+	return the batsman name and count of centuries
 
 ## Output Logs
 

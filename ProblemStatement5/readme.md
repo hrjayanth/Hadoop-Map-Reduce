@@ -4,10 +4,11 @@ List the fielder names and the total catches taken by him during the tournament
 
 ## Map-Reduce Diagram
 
-## Pseudocode
 ![ProblemStatement5_Mapper_Reducer_diagram](https://user-images.githubusercontent.com/3033681/197778025-638dc3d3-48de-4886-b276-31075a8faae9.png)
 
-## Output
+## Pseudocode
+
+## Output Logs
 ```
 [hadoop@master-node Hadoop-Map-Reduce-main]$ hadoop jar /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar -files mapper1.py,reducer1.py -mapper "python mapper1.py" -reducer "python reducer1.py" -input /JayLab/dataset.csv -output /JayLab/5/Part1
 packageJobJar: [/tmp/hadoop-unjar1787392485175933963/] [] /tmp/streamjob9057633002761999937.jar tmpDir=null

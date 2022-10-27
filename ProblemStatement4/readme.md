@@ -10,22 +10,26 @@ List all the bowlers and the corresponding extras bowled by them in a match
 
 ### Mapper 1
 
-Input: Dataset.csv <br \>
+<pre>
+Input: Dataset.csv
 
-For each row <br \>
-	Extract the extra run given deliveries <br \>
-    return the bowler name and the runs conceded <br \>
+For each row
+    Extract the extra run given deliveries
+    return the bowler name and the runs conceded
 
-Output: bowler		runs conceded <br \>
+Output: bowler		runs conceded
+</pre>
 
 ### Reducer 1
 
-Input: Output of Mapper1<br \>
+<pre>
+Input: Output of Mapper1
 
-For each row<br \>
-	Add the runs conceded by the bowler<br \>
+For each row
+    Add the runs conceded by the bowler
 
-Output: bowler 	    total runs conceded<br \>
+Output: bowler 	    total runs conceded
+</pre>
 
 ## Output Logs
 ```

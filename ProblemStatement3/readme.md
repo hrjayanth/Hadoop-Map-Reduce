@@ -9,30 +9,38 @@ List all the batsman who have hit centuries along with the count
 ## Pseudocode
 
 ### Mapper 1
+<pre>
 Input: Dataset.csv
 For each row
 	Extract the matchID_Batsman and Runs
 Output: matchID_Batsman		Runs
+</pre>
 
 ### Reducer 1
+<pre>
 Input: Output of Mapper1
 For each row
 	Add the Batsman's score in a match
 	return the batsman name and runs
 Output: Batsman 	runsScored in a match
+</pre>
 
 ### Mapper 2
+<pre>
 Input: Output of Reducer1
 For each row
 	Filter only the runs which is equal to or more than 100
 	Return the batsman name and runs
 Output: Batsman		Scores 100 and above
+</pre>
 
 ### Reducer 2
+<pre>
 Input: Output of Mapper2
 For each row
 	return the batsman name and count of centuries
 Output: Batsman		count of centuries
+</pre>
 
 ## Output Logs
 

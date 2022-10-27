@@ -9,31 +9,39 @@ Calcaulate the top 10 run scorers in the tournament
 ## Pseudocode
 
 ### Mapper 1
+<pre>
 Input: Dataset.csv
 For each row
 	Extract the Batsman and Runs
 Output: Batsman		Runs
+</pre>
 
 ### Reducer 1
+<pre>
 Input: Output of Mapper1
 For each row
 	Add the Batsman's score in a match
 	return the batsman name and runs
 Output: Batsman 	runsScored in a match
+</pre>
 
 ### Mapper 2
+<pre>
 Input: Output of Reducer1
 For each row
 	Sort the batsman in descending order as per the runs scored
 	Extract top 10 run scorers
 Output: Batsman		runs scored
+</pre>
 
 ### Reducer 2
+<pre>
 Input: Output of Mapper2
 For each row
 	Sort the batsman in descending order as per the runs scored
 	Extract top 10 run scorers
 Output: Batsman		runs scored
+</pre>
 
 ## Output Logs
 

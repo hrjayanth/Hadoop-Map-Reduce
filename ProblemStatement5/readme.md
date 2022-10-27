@@ -9,16 +9,20 @@ List the fielder names and the total catches taken by him during the tournament
 ## Pseudocode
 
 ### Mapper 1
+<pre>
 Input: Dataset.csv
 For each row
 	Extract the catches and the caught and bowled deliveries
 Output: fielder		1
+</pre>
 
 ### Reducer 1
+<pre>
 Input: Output of Mapper1
 For each row
 	Add the catches caught by a fielder
 Output: fielder 	catches
+</pre>
 
 ## Output Logs
 ```

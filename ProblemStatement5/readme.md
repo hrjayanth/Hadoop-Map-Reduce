@@ -8,6 +8,18 @@ List the fielder names and the total catches taken by him during the tournament
 
 ## Pseudocode
 
+### Mapper 1
+Input: Dataset.csv
+For each row
+	Extract the catches and the caught and bowled deliveries
+Output: fielder		1
+
+### Reducer 1
+Input: Output of Mapper1
+For each row
+	Add the catches caught by a fielder
+Output: fielder 	catches
+
 ## Output Logs
 ```
 [hadoop@master-node Hadoop-Map-Reduce-main]$ hadoop jar /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar -files mapper1.py,reducer1.py -mapper "python mapper1.py" -reducer "python reducer1.py" -input /JayLab/dataset.csv -output /JayLab/5/Part1

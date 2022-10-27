@@ -4,7 +4,36 @@ List the top 10 wicket takers of the tournament along with the wickets taken
 
 ## Map-Reduce Diagram
 
+![ProblemStatement2_Mapper_Reducer_diagram](https://user-images.githubusercontent.com/3033681/198283900-e998c729-13b4-4536-b83d-e17fafdce120.png)
+
 ## Pseudocode
+
+### Mapper 1
+Input: Dataset.csv
+For each row
+	Extract the Bowler and wickets
+Output: bowler		wickets
+
+### Reducer 1
+Input: Output of Mapper1
+For each row
+	Add the Bowler's wickets
+	return the Bowler name and wickets
+Output: Bowler 	wickets taken
+
+### Mapper 2
+Input: Output of Reducer1
+For each row
+	Sort as per the wickets taken in ascending Order
+	Extract only top 10 wicket takers
+Output: Bowler		 wickets taken
+
+### Reducer 2
+Input: Output of Mapper2
+For each row
+	Sort as per the wickets taken in ascending Order
+	Extract only top 10 wicket takers
+Output: Bowler		 wickets taken
 
 ## Output Logs
 

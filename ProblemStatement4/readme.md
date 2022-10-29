@@ -15,9 +15,9 @@ Input: Dataset.csv
 
 For each row
     Extract the extra run given deliveries
-    return the bowler name and the runs conceded
+    return the bowler name and the extra runs conceded
 
-Output: bowler		runs conceded
+Output: matchID_bowler		extra runs conceded
 </pre>
 
 ### Reducer 1
@@ -28,7 +28,7 @@ Input: Output of Mapper1
 For each row
     Add the runs conceded by the bowler
 
-Output: bowler 	    total runs conceded
+Output: matchID		bowler 	    total runs conceded
 </pre>
 
 ## Output Logs
